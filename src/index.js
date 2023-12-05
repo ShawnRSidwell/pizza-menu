@@ -12,13 +12,12 @@ function App() {
   );
 }
 
-function Pizza(props) {
+function Pizza() {
   return (
     <div>
-      <img src={props.photoName} alt={props.name} />
-      <h3> {props.name}</h3>
-      <p> {props.ingredients}</p>
-      <p> {props.price}</p>
+      <img src="pizzas/spinaci.jpg" alt="spinaci" />
+      <h3> Pizza Spinaci</h3>
+      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </div>
   );
 }
@@ -33,14 +32,9 @@ function Menu() {
   return (
     <main className="menu">
       <h2> Our Menu</h2>
-      {pizzaData.map((pizza) => (
-        <Pizza
-          name={pizza.name}
-          photoName={pizza.photoName}
-          ingredients={pizza.ingredients}
-          price={pizza.price}
-        />
-      ))}
+      <Pizza />
+      <Pizza />
+      <Pizza />
     </main>
   );
 }
